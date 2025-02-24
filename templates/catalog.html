@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h1 class="title-price" style="margin-top: 20px;">Каталог товаров</h1>
+</center>
+<div class="container-catalog">
+    <div class="catalog">
+        {% for product in products %}
+        <div class="product" style="padding: 21px;">
+            <a class="product-a" href="{% url 'product' product.id %}">
+                {% if product.image %}
+                <div class="product-img">
+                    <img src="{{ product.image.url }}" alt="">
+                </div>
+                {% else %}
+                <p class="no-image">No image available</p>
+                {% endif %}
+                <div class="product-info">
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-price">₸ {{ product.price }} KZT</div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

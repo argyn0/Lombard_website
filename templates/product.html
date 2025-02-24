@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="product-detail">
+    {% if product.image %}
+    <div class="product-detail-container">
+        <img src="{{ product.image.url }}">
+    </div>
+    {% else %}
+    <p class="no-image-detail">No image available</p>
+    {% endif %}
+    <div class="product-detail-container">
+        <h1>{{ product.name }}</h1>
+        <p class="product-detail-cost">₸ {{ product.price }} KZT</p>
+        <p class="product-detail-description">{{ product.description }}</p>
+        <a href="{% url 'contact' %}" class="button-a">
+            <div class="button">
+                <span>Позвонить</span>
+            </div>
+        </a>
+        <a href="{% url 'home' %}" class="button-a">
+            <div class="button" style="margin-top: 10px;">
+                <span>Вернуться на главную</span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

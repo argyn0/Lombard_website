@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% for ticket in tickets %}
+        <div>
+            <h3>Номер залогового билета: {{ticket.number}}</h3>
+            <p>Дата создания: {{ticket.data_created}}</p>
+            <p>Дата окончания: {{ticket.data_gone}}</p>
+            <head>
+                <a href="{{ticket.ticket_file.url}}" rel="stylesheet" download>Скачать залоговый билет</a>
+            </head>
+            <br>
+            <img src="{{ticket.ticket_img.url}}" alt="">>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

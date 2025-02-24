@@ -1,0 +1,488 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: rgb(249, 249, 249);
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 2px rgb(152, 152, 152);
+    margin-top: 80px;
+    background-color: #f2f1f1;
+}
+
+.footer-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+
+.footer-container-1 {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container-1 a {
+    padding: 15px;
+    text-decoration: none;
+    color: #545b62;
+}
+
+.footer-container-p {
+    padding-top: 15px;
+    color: #545b62;
+}
+
+.header {
+    width: 1200px;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(249, 249, 249);;
+    box-shadow: 0px 0px 10px rgb(152, 152, 152);
+}
+
+.links {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.link {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.container-2 {
+    color: rgb(146, 146, 146);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.no-image {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    /* Выравнивание текста по центру */
+    display: flex;
+    /* Превращаем блок в flex-контейнер */
+    align-items: center;
+    /* Выравниваем по вертикали по центру */
+    justify-content: center;
+    /* Выравниваем по горизонтали по центру */
+    /* Добавляем рамку для ясности */
+    color: black;
+    box-shadow: 0px 0px 1px rgb(152, 152, 152);
+    text-decoration: none;
+    margin: 0;
+}
+
+.container {
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(152, 152, 152);
+    background-color: rgb(249, 249, 249);
+}
+
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+	cursor: pointer;
+	padding: 7px 19px;
+	line-height: 34px;
+	user-select: none;
+    box-shadow: 0px 0px 2px rgb(152, 152, 152);
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #545b62;
+    color: white;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	background: #545b62;
+    color: white;
+}
+
+.calculator {
+    width: 500px;
+    min-height: 477px;
+    border-top: 8px solid rgb(159, 12, 12);
+    border-bottom: 8px solid rgb(159, 12, 12);
+    background-color: white;
+}
+
+.calculator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(79, 80, 81);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-price {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.input-group {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.form-control {
+    height: 48px;
+    box-shadow: 0px 0px 2px rgb(152, 152, 152);
+    border-radius: 0px;
+    color: #495057;
+}
+
+.input-group label {
+    height: 48px;
+    width: 40px;
+    padding-top: 8px;
+    padding-left: 5px;
+    border: 1px solid #e1e2e2;
+}
+
+.calculator-form p {
+    font-weight: 500;
+}
+
+.calculator-form-btns {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1;
+}
+
+.value {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.result-text {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.result {
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(159, 12, 12);
+}
+
+.auth-form {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.latest-arrival {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.latest-arrival-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.header-text {
+    font-size: 35px;
+    font-weight: bolder;
+    color: #495057;
+}
+
+.latest-arrival-container-1 a {
+    font-size: 22px;
+    color: rgb(159, 12, 12);
+    padding-left: 50px;
+}
+
+.latest-arrival-container-2 {
+    margin: auto;
+    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    box-shadow: 0px 0px 2px rgb(152, 152, 152);
+    height: 360px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    height: 30%;
+    margin: auto;
+    text-align: center;
+    /* Выравнивание текста по центру */
+    display: flex;
+    flex-direction: column;
+    /* Превращаем блок в flex-контейнер */
+    align-items: center;
+    /* Выравниваем по вертикали по центру */
+    justify-content: center;
+}
+
+.product:hover {
+    text-decoration: underline;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+.product-price {
+    color: rgb(159, 12, 12);
+}
+
+.info {
+    margin: auto;
+    align-items: center;
+}
+
+.info-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-block {
+    width: 300px;
+    height: 254px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-img {
+    padding-bottom: 30px;
+}
+
+.info-text {
+    width: 260px;
+    text-align: center;
+}
+
+.about-company {
+    width: 65%;
+}
+
+.about-company-text {
+    font-size: 18px;
+    color: #495057;
+    padding-bottom: 20px;
+}
+
+.about-company a {
+    font-size: 20px;
+    color: rgb(159, 12, 12);
+    padding-bottom: 30px;
+}
+
+.container-catalog {
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(152, 152, 152);
+    background-color: rgb(249, 249, 249);
+}
+
+.catalog {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-a {
+    text-decoration: none;
+    color: #495057;
+}
+
+.product-detail {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-detail-container {
+    padding-top: 40px;
+}
+
+.product-detail-container img {
+    width: 640px;
+    height: 640px;
+    object-fit: cover;
+}
+
+.product-detail-container h1 {
+    padding-bottom: 20px;
+}
+
+.product-detail-description {
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: rgb(127, 128, 128);
+}
+
+.product-detail-cost {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.button {
+    width: 378px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    animation-delay: 1s;
+    border: 1px solid black;
+}
+
+.button-a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.no-image-detail {
+    width: 640px;
+    height: 640px;
+    text-align: center;
+    /* Выравнивание текста по центру */
+    display: flex;
+    /* Превращаем блок в flex-контейнер */
+    align-items: center;
+    /* Выравниваем по вертикали по центру */
+    justify-content: center;
+    /* Выравниваем по горизонтали по центру */
+    /* Добавляем рамку для ясности */
+    color: black;
+    box-shadow: 0px 0px 1px 2px rgb(152, 152, 152);
+    text-decoration: none;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.contacts {
+    padding-left: 30px;
+}
+
+.contacts-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contacts-info {
+    text-align: center;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f2f1f1;
+    margin-top: 30px;
+}
+
+.contacts-info p {
+    margin-left: 15px;
+    color: #7a7a7a;
+    padding-top: 10px;
+}
+
+.contacts-info-detail {
+    color: black;
+}
+
+.contacts-phone {
+    
+}
+
+.contacts-text {
+    padding-top: 20px;
+}

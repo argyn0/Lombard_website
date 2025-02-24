@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}" role="alert">{{message}}</div>
+{% endfor %}
+{% block content %}
+
+
+<div class="container">
+    <div class="container-1">
+        <img src="{% static 'img/banner-1.jpg' %}">
+    </div>
+    <section class="calculator">
+        <section class="calculator-content">
+            <h2 class="title-price">Расчет суммы займа</h2>
+            <form method="POST" class="calculator-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="input-group">
+                    <input type="number" class="form-control weight-item" id="weight" name="product_weight" value=""
+                        placeholder="Укажите вес изделия" pattern="\d+(\.\d{2})?">
+                    <label>гр.</label>
+                </div>
+                <p>Укажите пробу золота</p>
+                <div class="calculator-form-btns">
+                    <div class="form_radio_btn">
+                        <input id="radio-2" type="radio" name="product_proba" value="375">
+                        <label for="radio-2">375</label>
+                    </div>
+                    <div class="form_radio_btn">
+                        <input id="radio-3" type="radio" name="product_proba" value="500">
+                        <label for="radio-3">500</label>
+                    </div>
+                    <div class="form_radio_btn">
+                        <input id="radio-6" type="radio" name="product_proba" value="958">
+                        <label for="radio-6">958</label>
+                    </div>
+                    <div class="form_radio_btn">
+                        <input id="radio-7" type="radio" name="product_proba" value="750">
+                        <label for="radio-7">750</label>
+                    </div>
+                    <div class="form_radio_btn">
+                        <input id="radio-8" type="radio" name="product_proba" value="999">
+                        <label for="radio-8">999</label>
+                    </div>
+                    <div class="form_radio_btn">
+                        <input id="radio-9" type="radio" name="product_proba" value="585">
+                        <label for="radio-9">585</label>
+                    </div>
+                </div>
+                <hr style="color: black; width: 100%; margin-top: 30px;">
+                <div class="value">
+                    <button type="submit" class="btn btn-primary" style="
+                        background-color: rgb(159, 12, 12); 
+                        border: 0px; 
+                        box-shadow: 0px 0px 2px 
+                        rgb(152, 152, 152);
+                        ">Рассчитать</button>
+                    <span class="result-text">Сумма возможного займа: <span class="result" id="result">{{ result }}</span>
+                        <span class="result">тг.</span></span>
+                </div>
+            </form>
+        </section>
+    </section>
+</div>
+
+<div class="latest-arrival">
+    <div class="latest-arrival-container-1">
+        <h2 class="header-text">Последние поступления</h2>
+        <a href="{% url 'catalog' %}">Весь каталог</a>
+    </div>
+    <div class="latest-arrival-container-2">
+        {% for product in products %}
+        <a class="product-a" href="{% url 'product' product.id %}">
+            <div class="product">
+                {% if product.image %}
+                <div class="product-img">
+                    <img src="{{ product.image.url }}" alt="">
+                </div>
+                {% else %}
+                <p class="no-image">No image available</p>
+                {% endif %}
+                <div class="product-info">
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-price">₸ {{ product.price }} KZT</div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="latest-arrival">
+    <div class="latest-arrival-container-1">
+        <h2 class="header-text">Как мы работаем</h2>
+    </div>
+    <div class="info-container">
+        <div class="info-block">
+            <div class="info-img">
+                <img src="{% static 'img/time-money.png' %}" alt="" height="58">
+            </div>
+            <div class="info-text">
+                <p class="info-description">Вам срочно нужны деньги на короткий срок и у вас есть ювелирное изделие, которое вы могли бы заложить.</p>
+            </div>
+        </div>
+        <img src="{% static 'img/arrow.png' %}" height="8px" width="30px" style="margin-top: 31px;">
+        <div class="info-block">
+            <div class="info-img">
+                <img src="{% static 'img/pawnshop.png' %}" alt="" height="58">
+            </div>
+            <div class="info-text">
+                <p class="info-description">Вы обращаетесь в наш ломбард, мы оценивает стоимость вашего изделия и предлагаем вам эту сумму под определенный процент на 30 дней</p>
+            </div>
+        </div>
+        <img src="{% static 'img/arrow.png' %}" height="8px" width="30px" style="margin-top: 31px;">
+        <div class="info-block">
+            <div class="info-img">
+                <img src="{% static 'img/list.png' %}" alt="" height="58">
+            </div>
+            <div class="info-text">
+                <p class="info-description">Если вас устраивают наши условия, мы подписываем договор займа и выдаем вам деньги, а себе в залог оставляем ваше ювилирное изделие</p>
+            </div>
+        </div>
+        <img src="{% static 'img/arrow.png' %}" height="8px" width="30px" style="margin-top: 31px;">
+        <div class="info-block">
+            <div class="info-img">
+                <img src="{% static 'img/jewel.png' %}" alt="" height="58">
+            </div>
+            <div class="info-text">
+                <p class="info-description">Через 30 дней вы возвращаете нам взятую сумму + проценты по договору, а мы возвращаем вам ваше ювилирное изделие</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="latest-arrival">
+    <div class="latest-arrival-container-1">
+        <h2 class="header-text">О компании</h2>
+    </div>
+    <div class="about-company">
+        <p class="about-company-text">
+            «ЛомбардКапитал» - одна из крупнейших сетей 
+            финансовых офисов в восточной европе. 
+            Мы представлены в 42 городах Российской федерации. С 2009 года 
+            сеть работает в России. За 7 лет активного развития, предприятие 
+            прошло путь становление от одного ломбардного отделения до разветвленной 
+            сети финансовых офисов, представленных в: Москве и Московской области, 
+            Санкт-Петербурге, Ростове и Ростовской области, Ставрополе и Ставропольском 
+            крае, Краснодаре и Краснодарском крае.
+        </p>
+        <a href="{% url 'contact' %}">Подробнее о компании</a>
+    </div>
+</div>
+{% endblock %}
