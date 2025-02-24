@@ -104,3 +104,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'argynakhmetov3@gmail.com'
 EMAIL_HOST_PASSWORD = 'bfac dwxg umiw sixo'
+
+ALLOWED_HOSTS = 'shiro0.pythonanywhere.com'
